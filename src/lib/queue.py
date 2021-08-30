@@ -2,7 +2,7 @@
 
 class queue:
     def __init__(self, iterable, maximum):
-        if iterable == None:
+        if iterable is None:
             self.l = []
         else:
             self.l = list(iterable)
@@ -23,7 +23,9 @@ class queue:
         self.__normalize()
         
     def pop(self):
-        return self.l.pop()
+        if len(self.l):
+            return self.l.pop()
+        return None
     
     def clear(self):
         return self.l.clear()
