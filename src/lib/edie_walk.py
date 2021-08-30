@@ -1,16 +1,16 @@
 from .utils import walk, render
 
-RED = (0, 255, 0)
-WHITE = (0, 125, 184)
-BLUE = (190, 51, 214)
+COLOR01 = (0, 255, 0)
+COLOR02 = (0, 125, 184)
+COLOR03 = (190, 51, 214)
 
 
 def edie_walk(options):
     if len(options.buffer) == 0:
-        walk(RED, WHITE, options)
-        walk(WHITE, BLUE, options)
-        walk(BLUE, WHITE, options)
-        walk(WHITE, RED, options)
+        walk(COLOR01, COLOR02, options)
+        walk(COLOR02, COLOR03, options)
+        walk(COLOR03, COLOR02, options)
+        walk(COLOR02, COLOR01, options)
 
     popped = options.buffer.pop()
     options.colors.push(popped)
