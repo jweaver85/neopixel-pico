@@ -24,3 +24,9 @@ class TestQueue(TestCase):
         q = queue([item], 13)
         returned = q.pop()
         self.assertEqual(item, returned)
+
+    def test_pop_empty(self):
+        q = queue([], 35)
+        returned = q.pop()
+        self.assertListEqual(list(q), [])
+        self.assertEqual(returned, None)
