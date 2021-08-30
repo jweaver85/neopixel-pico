@@ -1,4 +1,4 @@
-from utils import walk, render
+from .utils import walk, render
 
 COLOR01 = (255, 0, 0)
 COLOR02 = (255, 85, 0)
@@ -10,6 +10,7 @@ COLOR07 = (0, 110, 255)
 COLOR08 = (0, 0, 255)
 COLOR09 = (157, 0, 255)
 COLOR10 = (255, 0, 200)
+
 
 def rainbowwalk(options):
     if len(options.buffer) == 0:
@@ -23,7 +24,7 @@ def rainbowwalk(options):
         walk(COLOR08, COLOR09, options)
         walk(COLOR09, COLOR10, options)
         walk(COLOR10, COLOR01, options)
-        
+
     popped = options.buffer.pop()
     options.colors.push(popped)
     options.buffer.push(popped)
