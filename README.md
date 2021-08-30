@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/jweaver85/neopixel-pico/branch/main/graph/badge.svg?token=3M2QBFS0IA)](https://codecov.io/gh/jweaver85/neopixel-pico)
 # neopixel-pico
 
 ![alt text](circuit-diagram.png)
