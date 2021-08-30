@@ -1,7 +1,14 @@
 from .utils import translate, walk, randColor, render
 
 
+def new_untested_method(options):
+    options.new_thing = 'foo'
+
+
 def color_walk(options):
+    if options.does_not_exist:
+        new_untested_method(options)
+
     # inital state if buffer has been cleared pick two random colors
     if len(options.buffer) == 0:
         walk(randColor(), randColor(), options)
