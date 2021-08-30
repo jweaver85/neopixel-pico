@@ -1,4 +1,4 @@
-from utils import translate, walk, render
+from utils import walk, render
 
 COLOR01 = (255, 0, 0)
 COLOR02 = (255, 85, 0)
