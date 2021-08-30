@@ -1,4 +1,5 @@
-from utils import translate, render, randColor
+from .utils import translate, randColor
+
 
 def sparkle(options):
     while len(options.colors) < options.num_pixels:
