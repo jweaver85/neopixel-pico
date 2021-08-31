@@ -1,10 +1,15 @@
-from utils import translate, render, randColor
+from .utils import translate, render, randColor
 
 RED = (0,255,0)
 WHITE = (0,125,184)
 BLUE = (190,51,214)
 
 shift_count = 0
+
+
+def render(index, options):
+    options.pixels[index] = options.colors[index]
+
 
 def sparkle_shift(options):
     global shift_count
@@ -27,6 +32,6 @@ def sparkle_shift(options):
             c2 = translate(c[1], 0, step)
             c3 = translate(c[2], 0, step)
             options.colors[i] = (c1, c2, c3)
-        options.pixels[i] = options.colors[i]
+        render(i, options)
         i = i + 1
     options.pixels.write()
