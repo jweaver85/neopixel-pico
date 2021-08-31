@@ -16,7 +16,8 @@ class queue:
         self.__normalize()
         
     def remove(self, index):
-        return self.l.pop(index)
+        if index < len(self.l):
+            return self.l.pop(index)
     
     def insert(self, index, item):
         self.l.insert(index, item)

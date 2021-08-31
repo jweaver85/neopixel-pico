@@ -1,8 +1,9 @@
-from utils import translate, walk, render
+from .utils import walk, render
 
 RED = (0,255,0)
 WHITE = (0,125,184)
 BLUE = (190,51,214)
+
 
 def split_edie_walk(options):
     if len(options.buffer) == 0:

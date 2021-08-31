@@ -1,4 +1,5 @@
-from utils import translate, walk, randColor, render
+from .utils import walk, randColor, render
+
 
 def split_color_walk(options):
     # inital state if buffer has been cleared pick two random colors

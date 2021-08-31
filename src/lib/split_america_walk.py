@@ -1,16 +1,16 @@
-from utils import translate, walk, render
+from .utils import walk, render
 
-RED = (255, 0, 0)
-WHITE = (255, 255, 255)
-BLUE = (0, 0, 255)
+COLOR01 = (255, 0, 0)  # RED
+COLOR02 = (255, 255, 255)  # WHITE
+COLOR03 = (0, 0, 255)  # BLUE
 
 
 def split_america_walk(options):
     if len(options.buffer) == 0:
-        walk(RED, WHITE, options)
-        walk(WHITE, BLUE, options)
-        walk(BLUE, WHITE, options)
-        walk(WHITE, RED, options)
+        walk(COLOR01, COLOR02, options)
+        walk(COLOR02, COLOR03, options)
+        walk(COLOR03, COLOR02, options)
+        walk(COLOR02, COLOR01, options)
 
     start = int(0)
     left_middle = int(len(options.colors) / 2 - 1)

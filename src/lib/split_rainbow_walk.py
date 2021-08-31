@@ -1,4 +1,4 @@
-from utils import translate, walk, render
+from .utils import walk, render
 
 COLOR01 = (255, 0, 0)
 COLOR02 = (255, 85, 0)
@@ -10,6 +10,7 @@ COLOR07 = (0, 110, 255)
 COLOR08 = (0, 0, 255)
 COLOR09 = (157, 0, 255)
 COLOR10 = (255, 0, 200)
+
 
 def split_rainbow_walk(options):
     if len(options.buffer) == 0:
