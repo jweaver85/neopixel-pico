@@ -2,13 +2,13 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.black_light import black_light
+from lib.black_light import black_light
 from .test_utils import create_options
 
 
 class TestBlackLight(TestCase):
 
-    @patch('src.lib.black_light.render')
+    @patch('lib.black_light.render')
     def test_black_light(self, render):
         options = create_options(num_pixels=5, step_size=255)
         for i in range(options.num_pixels):

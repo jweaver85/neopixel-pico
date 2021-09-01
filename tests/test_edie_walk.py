@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.edie_walk import (
+from lib.edie_walk import (
     COLOR01, COLOR02, COLOR03, edie_walk
 )
 from .test_utils import create_options
@@ -10,7 +10,7 @@ from .test_utils import create_options
 
 class TestEdieWalk(TestCase):
 
-    @patch('src.lib.edie_walk.render')
+    @patch('lib.edie_walk.render')
     def test_edie_walk_full_iteration(self, render):
         options = create_options(num_pixels=3, step_size=255)
         edie_walk(options)

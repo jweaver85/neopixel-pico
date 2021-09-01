@@ -1,4 +1,4 @@
-from .utils import walk, render
+from lib.utils import walk, render
 
 COLOR01 = (171, 103, 164)
 COLOR02 = (121, 132, 160)

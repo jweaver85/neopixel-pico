@@ -2,13 +2,13 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.rainbowwalk import rainbowwalk
+from lib.rainbowwalk import rainbowwalk
 from .test_utils import create_options
 
 
 class TestRainbowwalk(TestCase):
 
-    @patch('src.lib.rainbowwalk.render')
+    @patch('lib.rainbowwalk.render')
     def test_rainbowwalk(self, render):
         options = create_options(num_pixels=10, step_size=255)
 

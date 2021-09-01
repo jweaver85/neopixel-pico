@@ -1,9 +1,9 @@
 from unittest import TestCase
 from mock import Mock
 
-from src.lib.options import Options
-from src.lib.queue import queue
-from src.lib.utils import render, rand, randColor, translate
+from lib.options import Options
+from lib.queue import queue
+from lib.utils import render, rand, randColor, translate
 
 
 class TestUtils(TestCase):

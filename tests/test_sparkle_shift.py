@@ -2,13 +2,14 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.sparkle_shift import sparkle_shift, render
+from lib.sparkle_shift import sparkle_shift, render
+
 from .test_utils import create_options
 
 
 class TestSparkleShift(TestCase):
 
-    @patch('src.lib.sparkle_shift.render')
+    @patch('lib.sparkle_shift.render')
     def test_sparkle_shift(self, mock_render):
         options = create_options(num_pixels=100, step_size=1)
         sparkle_shift(options)

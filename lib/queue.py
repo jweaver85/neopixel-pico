@@ -1,5 +1,3 @@
-# queue.py
-
 class queue:
     def __init__(self, iterable, maximum):
         if iterable is None:

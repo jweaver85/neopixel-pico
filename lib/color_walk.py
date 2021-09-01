@@ -1,4 +1,4 @@
-from .utils import translate, walk, randColor, render
+from lib.utils import walk, randColor, render
 
 
 def color_walk(options):

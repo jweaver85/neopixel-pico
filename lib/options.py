@@ -1,6 +1,4 @@
 class Options:
-    #static CLASS variable
-    static_variable = 'static variable'
                    
     def __init__(self, num_pixels, step, brightness, sleepytime, pixels, colors, buffer, algo, debug):
         # instance variables

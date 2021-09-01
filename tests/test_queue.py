@@ -1,7 +1,8 @@
 from unittest import TestCase
 
-from src.lib.queue import queue
-from src.lib.utils import randColor
+from lib.queue import queue
+from lib.utils import randColor
+
 
 class TestQueue(TestCase):
 

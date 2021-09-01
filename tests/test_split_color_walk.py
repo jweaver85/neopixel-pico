@@ -2,13 +2,13 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.split_color_walk import split_color_walk
+from lib.split_color_walk import split_color_walk
 from .test_utils import create_options
 
 
 class TestSplitColorWalk(TestCase):
 
-    @patch('src.lib.split_color_walk.render')
+    @patch('lib.split_color_walk.render')
     def test_split_color_walk(self, render):
         options = create_options(num_pixels=10, step_size=255)
         split_color_walk(options)

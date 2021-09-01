@@ -2,13 +2,14 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.sparkle import sparkle, render
+from lib.sparkle import sparkle, render
+
 from .test_utils import create_options
 
 
 class TestSparkle(TestCase):
 
-    @patch('src.lib.sparkle.render')
+    @patch('lib.sparkle.render')
     def test_sparkle(self, mock_render):
         options = create_options(num_pixels=100, step_size=1)
         sparkle(options)

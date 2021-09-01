@@ -2,13 +2,13 @@ from unittest import TestCase
 
 from mock import patch
 
-from src.lib.split_america_walk import split_america_walk
+from lib.split_america_walk import split_america_walk
 from .test_utils import create_options
 
 
 class TestSplitAmericaWalk(TestCase):
 
-    @patch('src.lib.split_america_walk.render')
+    @patch('lib.split_america_walk.render')
     def test_split_america_walk(self, render):
         options = create_options(num_pixels=10, step_size=255)
         split_america_walk(options)

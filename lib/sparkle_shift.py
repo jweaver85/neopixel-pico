@@ -1,16 +1,29 @@
-from .utils import translate, randColor
+from lib.utils import translate, render, randColor
+
+RED = (0,255,0)
+WHITE = (0,125,184)
+BLUE = (190,51,214)
+
+shift_count = 0
 
 
 def render(index, options):
     options.pixels[index] = options.colors[index]
 
 
-def sparkle(options):
+def sparkle_shift(options):
+    global shift_count
     while len(options.colors) < options.num_pixels:
         options.colors.push(randColor())
 
     i = 0
-    step = options.step
+    step = 1
+    if shift_count == 15:
+        options.colors.push(options.colors.pop())
+        shift_count = 0
+    else:
+        shift_count = shift_count + 1
+
     for c in options.colors:
         if c == (0, 0, 0):
             options.colors[i] = randColor()

@@ -1,4 +1,4 @@
-from .utils import walk, randColor, render
+from lib.utils import walk, randColor, render
 
 
 def split_color_walk(options):

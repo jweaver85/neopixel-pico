@@ -1,4 +1,4 @@
-from .utils import walk, render
+from lib.utils import walk, render
 
 RED = (0,255,0)
 WHITE = (0,125,184)

@@ -1,7 +1,7 @@
 from mock import Mock
 
-from src.lib.options import Options
-from src.lib.queue import queue
+from lib import Options
+from lib.queue import queue
 
 
 def create_options(
